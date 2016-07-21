@@ -7,15 +7,10 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".activities.MainActivity"
-    android:backgroundTint="#acf093"
-    android:backgroundTintMode="screen"
-    android:background="#91fabf"
-    android:visibility="visible"
-    android:theme="@android:style/Widget.Material.Light.ButtonBar">
+    tools:context=".activities.MainActivity">
 
     <include
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/tipContent"
         layout="@layout/content_tip"/>
@@ -23,10 +18,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/fragmentList"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
         android:name="com.android.amagi.tipcalc.fragments.TipHistoryFragment"
         tools:layout="@layout/fragment_tip_history"
-        android:layout_below="@+id/tipContent"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_toRightOf="@id/tipContent"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@id/tipContent"/>
 
 </RelativeLayout>
